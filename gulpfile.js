@@ -4,13 +4,13 @@ var rename = require('gulp-rename')
 
 gulp.task('default', function(){
 
-    return gulp.src('./pages/*.hbs')
+    return gulp.src('./src/pages/*.hbs')
             .pipe(handlebars({}, {
                 ignorePartials: true,
-                batch: ['./partials']
+                batch: ['./src/partials']
             }))
             .pipe(rename({
                 extname: '.html'
             }))
-            .pipe(gulp.dest('./dist'))
+            .pipe(gulp.dest('./'))
 })
